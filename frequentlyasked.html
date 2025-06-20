@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Frequentlyasked </title>
+        <meta name="description" content="This is where you will find more questions about us." />
+        <title> Frequentlyasked | Ojay Accessories </title>
+        <link rel="canonical" href="https://ojayaccessories.com/" />
         <!-- This is the title of the webpage -->
         <link rel="stylesheet" href="CSS/style.css">
     </head>
@@ -14,12 +16,14 @@
             <a href="index.html"> Home </a>
             <a href="about.html"> About </a>
             <a href="products.html"> Products </a>
-            <a href="#"> Frequently Asked Questions </a>
+            <a href="#"> Frequently Asked Questions And Enquiries </a>
             <a href="contact.html"> Contact </a>
             </nav>
         <hr>
         <header class="main" >
         <center><h1><font size="12"> Ojay Accessories </font></h1></center>
+
+        <center><h1><font size="12"> Frequently asked Questions and Enquiries </font></h1></center>
 
         <center><img src="img/pexels-enginakyurt-1458867.jpg" width="50%" height="40%" ></img></center>
     </header>
@@ -28,6 +32,45 @@
         </p><center><b>What is your shipping policy?</b><br> We offer free standard shipping on all orders over R300.</center></p>
         </p><center><b>How long does shipping and delivery take?</b><br> Shipping varies depending on the location. Strandard shipping tryically takes 2-5 days while expedited shipping takes 1-2 days.</center></p>
         </p><center><b>How do I contact customer services?</b><br> You can contact out customer services team by phone, email or on our social media platforms.</center></p>
+
+        <!-- This is where the form will be. -->
+        <hr>
+        <center>
+    <form action="/submit-inquiry" method="POST">
+  <h2>Product Order.</h2>
+
+  <label for="name">Full Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <form id="phoneForm" onsubmit="return validatePhoneForm()">
+  <label for="phone">Phone Number:</label><br>
+  <input type="text" id="phone" name="phone" required><br><br>
+
+  <label for="products">Interested Product:</label><br>
+  <select id="product" name="product">
+    <option value="Outdoor Sunglasses R100">Outdoor Sunglasses R100</option>
+    <option value="Outdoor Sunglasses R150">Outdoor Sunglasses R150</option>
+    <option value="Outdoor Sunglasses R200">Outdoor Sunglasses R200</option>
+    <option value="Outdoor Sunglasses R250">Outdoor Sunglasses R250</option>
+    <option value="Necklace R350">Necklace R350</option>
+    <option value="Necklace R450">Necklace R450</option>
+    <option value="Mens Watch R550">Mens Watch R550</option>
+  </select><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+
+  <button type="Send Inquiry" onclick="SendInquiry()">Send Inquiry</button>
+</form>
+
+</center>
+
+<!-- Link to JavaScript file -->
+  <script src="validation.js"></script>
 
 
         <hr>
